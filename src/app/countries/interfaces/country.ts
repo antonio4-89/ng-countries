@@ -115,3 +115,21 @@ export interface PostalCode {
   format: string;
   regex:  string;
 }
+
+export type Region = 'Africa'| 'Americas'| 'Asia'| 'Europe'| 'Oceania' | ''
+
+export interface CacheStore {
+  byCapital: TermCountries;
+  byCountries: TermCountries;
+  byRegion: RegionCountries
+}
+
+export interface TermCountries {
+  term: string,
+  countries: Country[]
+}
+
+export interface RegionCountries {
+  region: Region;
+  countries: Country[]
+}
